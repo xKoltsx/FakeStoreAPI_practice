@@ -1,0 +1,38 @@
+<ng-container *ngIf="product.length != 0">
+  <div class="col-12 d-flex align-items-center justify-content-around p-5 border border-black " *ngFor="let product of product; let i = index">
+    <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center align-items-center block-a ">
+      <div class="col-lg-3 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+        <img [src]="product.image" style="height: 300px; width: 250px; max-width: 285px" alt="">
+      </div>
+      <div class="col-lg-9 col-md-12 col-sm-12 d-flex justify-content-center block-a text-bar flex-column">
+        <p>Назва: {{product.title}}</p>
+        <p>Категорія: {{product.category}}</p>
+        <p>Рейтинг: {{product.rating.rate}}</p>
+        <p>Ціна: {{product.price}}</p>
+        <p><button class="btns btn btn-dark" (click)="removeItem(product)"><i class="fas fa-trash-alt"></i></button></p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center align-items-center m-5">
+    <button class="btn btn-dark me-3 text-center">Order</button>
+    <h4 class="text-bar">Total price: ${{grandTotal}}</h4>
+  </div>
+
+</ng-container>
+
+
+<ng-container *ngIf="product.length == 0">
+  <div class="container-fluid">
+    <div class="cart col-12 d-flex justify-content-center align-items-center">
+      <div class="main-cart bg-white col-9 d-flex justify-content-center flex-column rounded border border-dark border border-3">
+        <div class="main-cart-img-text w-100 h-75 d-flex justify-content-center align-items-center">
+          <img class="main-cart-img" src="assets/images/cart.webp" style="height: 200px; width: 100%; max-width: 285px">
+        </div>
+        <div class="main-cart-btn w-100 h-25 d-flex justify-content-center align-items-center flex-column">
+          <p class="text-center text-dark">Your cart is empty</p>
+          <button class="btns btn btn-dark" routerLink="/products">Show all products</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

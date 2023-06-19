@@ -1,1 +1,42 @@
-<p>products works!</p>
+<div class="container-fluid d-flex flex-wrap justify-content-around">
+  <div class="pt-5 col-12 d-flex justify-content-around d-flex align-items-center flex-column j">
+    <div class=" col-3 d-flex justify-content-around">
+      <button type="button" (click)="getProductds()" class="btn-for-sort btn btn-dark">All products</button>
+      <button routerLink="/cart" type="button" class="btn-for-sort btn btn-dark"><i class="fa-solid fa-basket-shopping" ></i></button>
+    </div>
+    <div class=" col-3 mt-3 d-flex justify-content-around ">
+      <button type="button" value="electronics" (click)="getProductByCategory($event)" class="btn-for-sort btn btn-dark ">Electronics</button>
+      <button type="button" value="men's clothing" (click)="getProductByCategory($event)" class="btn-for-sort btn btn-dark">Men's clothing</button>
+    </div>
+    <div class=" col-3 mt-3 d-flex justify-content-around">
+      <button type="button" value="women's clothing" (click)="getProductByCategory($event)" class="btn-for-sort btn btn-dark">Women's clothing</button>
+      <button type="button" value="jewelery" (click)="getProductByCategory($event)" class="btn-for-sort btn btn-dark">Jewelery</button>
+    </div>
+
+
+  </div>
+  <div class="row" style="width: 100%">
+    <div class="col-12 col-lg-4 col-md-6 col-sm-12 p-2 pt-5 pb-5 d-flex flex-column align-items-center justify-content-center" *ngFor="let product of products">
+      <div class="block" style="height: 650px; width: 100%; max-width: 385px">
+          <div class="d-flex justify-content-center "><img [src]="product.image" style="height: 300px; width: 100%; max-width: 285px" alt=""></div>
+          <div class="text-bar asdad"><p>Назва: {{product.title}}</p></div>
+          <div class="text-bar"><p>Категорія: {{product.category}}</p></div>
+          <div class="text-bar">
+            <p>Ціна: {{product.price}}</p>
+            <p>Рейтинг: {{product.rating.rate}}</p>
+          </div>
+          <div class="btns w-100 ">
+            <div class="input-group mb-3 d-flex flex-column ">
+              <div class="d-flex justify-content-center align-items-center ps-5 pe-5"><span class="input-group-text w-50" id="basic-addon1">Quantity:</span>
+                <input type="number" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="d-flex justify-content-around pt-3"><button type="button" class="btns btn btn-dark" (click)="addToCart(product)">Buy</button>
+                <button type="button" class="btns btn btn-dark">Review</button>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

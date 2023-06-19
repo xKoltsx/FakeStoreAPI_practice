@@ -1,0 +1,32 @@
+.cart
+{
+  height: 80vh;
+}
+.main-cart
+{
+  height: 70vh;
+}
+.btns:hover
+{
+  transition: 0.3s;
+  color: #17a7c6;
+}
+.cart-product
+{
+  height: 80vh;
+}
+.main-con-item
+{
+  height: 80vh;
+}
+.text-bar
+{
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s;
+}
+.block-a {
+  display: flex;
+  flex-wrap: wrap;
+}

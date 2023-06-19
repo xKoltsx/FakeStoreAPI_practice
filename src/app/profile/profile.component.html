@@ -1,1 +1,30 @@
-<p>profile works!</p>
+<div class="profile container-fluid d-flex justify-content-center pt-5">
+  <div class="main-con-profile row rounded col-12 d-flex justify-content-center">
+
+      <div class="con1-profile rounded col-lg-6 col-md-12 col-sm-12">
+        <div class="con1-ava d-flex justify-content-center pt-5">
+          <img class="con1-photo rounded-circle" src="assets/images/ava.png" alt="">
+        </div>
+        <div class="con1-nikename text-bar text-center"><p>{{username}}</p>
+          <button type="button" class="btns btn btn-dark">Edit user profile</button>
+        </div>
+      </div>
+
+      <div class="con2-profile rounded col-lg-6 col-md-12 col-sm-12 d-flex justify-content-around align-items-center">
+        <div class="kolechko1 text-bar">
+          <div><p>First name: {{name.firstName}}</p></div>
+          <div><p>Second name: {{name.lastName}}</p></div>
+          <div><p>Phone: {{phone}}</p></div>
+          <div><p>Gmail: {{email}}</p></div>
+
+        </div>
+        <div class="kolechko2 text-bar d-flex flex-column">
+          <button type="button" class="btns btn btn-dark">Edit user profile</button>
+          <button type="button" class="btns btn btn-dark">Edit user profile</button>
+          <button type="button" class="btns btn btn-dark">Edit user profile</button>
+          <button type="button" class="btns btn btn-dark">Edit user profile</button>
+        </div>
+      </div>
+
+  </div>
+</div>

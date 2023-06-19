@@ -1,0 +1,44 @@
+.BackGroundProducts
+{
+  background: #17a7c6;
+  background-size: cover;
+
+}
+.btns
+{
+  width: 25%;
+}
+.btns:hover
+{
+  transition: 0.5s;
+  color: #17a7c6;
+}
+.text-bar
+{
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s;
+}
+.mass
+{
+  min-height: 500px;
+}
+.asdad
+{
+  min-height: 80px;
+}
+.block{
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+  border: 1px solid rgba(0,0,0,.125);
+}
+.btn-for-sort
+{
+  min-width: 155px;
+  min-height: 40px;
+}
+.btn-for-sort:hover
+{
+  transition: 0.3s;
+  color: #17a7c6;
+}
